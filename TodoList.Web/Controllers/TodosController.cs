@@ -88,7 +88,9 @@ namespace TodoList.Web.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return RedirectToAction("Index");
+                // return RedirectToAction("Index");
+                return View (todo);
+
             }
 
             var currentUser = await _userManager.GetUserAsync(User);
